@@ -29,15 +29,22 @@ def students_registration ():
         if not name:
                 print ("\nThis field cannot be empty")
                 continue
-        age = int (input("\nPlease enter the student age:"))
-        if not age:
-            print ("\nThis field cannot be empty")
+        try:
+            age = int (input("\nPlease enter the student age:"))
+            if not age:
+                print ("\nThis field cannot be empty")
+                continue
+        except ValueError:
+            print ("Please enter the roght values")
             continue
         course = input ("\n Please enter the student course:").strip()
         if not course:
                 print ("\n This field cannot be empty")
                 continue 
         status = input ("\nPlease enter the student status (active/inactive):").strip()
+        if status not in ( "active" or "inactive"):
+            print ("Please choose between the options")
+            continue
         if not status:
             print ("This field cannot be empty")
             continue
