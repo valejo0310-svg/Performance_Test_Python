@@ -42,7 +42,7 @@ def students_registration ():
                 print ("\n This field cannot be empty")
                 continue 
         status = input ("\nPlease enter the student status (active/inactive):").strip()
-        if status not in ( "active" or "inactive"):
+        if status not in ( "active", "inactive"):
             print ("Please choose between the options")
             continue
         if not status:
