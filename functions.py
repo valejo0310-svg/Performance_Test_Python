@@ -164,7 +164,7 @@ Status   : {students['Status']}
                 except ValueError:
                     print("Invalid name.")
 
-            updated_age = int(input("New age (Have to update): ")).strip()#new variables
+            updated_age = int(input("New age (Have to update): "))#new variables
             if updated_age:
                 try:
                     new_age = int(updated_age)
